@@ -25,24 +25,25 @@ const MyProfile = ({navigation}) => {
             </View>
 
             <View style = {styles.contactsContainer}>
-                <View style = {styles.phone}>
-                <TouchableOpacity>
+
+                <View >
+                <TouchableOpacity style = {styles.phone}>
                 <SimpleLineIcons name="phone" size={19} color="black" />
-                <View><Text>+233 56789876567</Text></View>
+                <Text style = {styles.contactText}>+233 56789876567</Text>
                 </TouchableOpacity>
                 </View>
 
-                <View style = {styles.email}>
-                <TouchableOpacity>
+                <View >
+                <TouchableOpacity style = {styles.email}>
                 <MaterialCommunityIcons name="email-outline" size={19} color="black" />
-                <View><Text>johnnysins@email.com</Text></View>
+                <Text style = {styles.contactText}>johnnysins@email.com</Text>
                 </TouchableOpacity>
                 </View>
 
-                <View style = {styles.location}>
-                <TouchableOpacity>
-                <EvilIcons name="location" size={19} color="black" />
-                <View><Text>Atalanta, GA</Text></View>
+                <View >
+                <TouchableOpacity style = {styles.location}>
+                <EvilIcons name="location" size={20} color="black" />
+                <Text style = {styles.contactText}>Atalanta, GA</Text>
                 </TouchableOpacity>
                 </View>
             </View>
@@ -77,16 +78,27 @@ const styles = StyleSheet.create({
     socialMedia : {
         // justifyContent : 'space-between',
         flexDirection : 'row',
+
         marginTop : 25
     },
     phone : {
-        flexDirection : 'row'
+        flexDirection : 'row',
+        //backgroundColor : 'red'
     },
     contactsContainer : {
         flex : 0.3,
-        marginTop : 30
+        marginTop : 30,
     },
     email : {
-        marginVertical : 35
+        marginVertical : 35,
+        flexDirection : 'row'
+    },
+
+    location : {
+        //marginVertical : 35,
+        flexDirection : 'row'
+    },
+    contactText : {
+        marginLeft : 20
     }
 })

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Button } from 'react-native';
 
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
@@ -17,7 +17,8 @@ const Scanner = ({navigation}) => {
 
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
-    alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+    navigation.navigate('Membership')
+    // alert(`Bar code with type ${type} and data ${data} has been scanned!`);
   };
 
   if (hasPermission === null) {
@@ -68,7 +69,8 @@ const styles = StyleSheet.create({
   },
 
   barcodeScanner : {
-    flex : 0.8
+    flex : 0.8,
+    marginVertical : 20
   },
   shareQrContainer : {
     flex : 0.2,

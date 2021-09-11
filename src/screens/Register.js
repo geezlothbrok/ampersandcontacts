@@ -26,6 +26,7 @@ const Register = ({navigation}) => {
                 <Text style = {styles.text}>Full Name</Text>
                 <TextInput style = {styles.input}
                 autoCapitalize = 'words'
+                textAlign = 'right'
                 autoCorrect = {false}
                 autoCompleteType = 'name'></TextInput>
                 </View>
@@ -35,6 +36,7 @@ const Register = ({navigation}) => {
                 <Text style = {styles.text}>Email</Text>
                 <TextInput style = {styles.input}
                 autoCapitalize = 'none'
+                textAlign = 'right'
                 autoCorrect = {false}
                 autoCompleteType = 'email'></TextInput>
                 </View>
@@ -42,7 +44,7 @@ const Register = ({navigation}) => {
 
                 <View style = {styles.nameContainer}>
                 <Text style = {styles.text}>Phone Number</Text>
-                <TextInput style = {styles.input} autoCompleteType = 'cc-number'></TextInput>
+                <TextInput style = {styles.input} autoCompleteType = 'cc-number' textAlign = 'right'></TextInput>
                 </View>
                 <Text style = { styles.line}></Text>
 
@@ -50,6 +52,7 @@ const Register = ({navigation}) => {
                 <Text style = {styles.text}>Role</Text>
                 <TextInput style = {styles.input}
                 autoCapitalize = 'words'
+                textAlign = 'right'
                 autoCorrect = {true}
                 autoCompleteType = 'name'></TextInput>
                 </View>
@@ -59,6 +62,7 @@ const Register = ({navigation}) => {
                 <Text style = {styles.text}>Twitter</Text>
                 <TextInput style = {styles.input}
                 autoCapitalize = 'none'
+                textAlign = 'right'
                 autoCorrect = {false}
                 autoCompleteType = 'off'></TextInput>
                 </View>
@@ -68,10 +72,11 @@ const Register = ({navigation}) => {
                 <Text style = {styles.text}>Linkedln</Text>
                 <TextInput style = {styles.input}
                 autoCapitalize = 'none'
+                textAlign = 'right'
                 autoCorrect = {false}
                 autoCompleteType = 'off'></TextInput>
                 </View>
-                <Text style = { styles.line}></Text>
+                
             </View>
 
             <View style = {styles.buttonContainer} onPress = {handleOnSave}>
@@ -112,7 +117,7 @@ const styles = StyleSheet.create({
     },
     line : {
         height : 2,
-        backgroundColor : '#F3F3F3',
+        backgroundColor : '#D5D8DC',
         marginVertical : 10
     },
     text : {
@@ -139,7 +144,8 @@ const styles = StyleSheet.create({
         fontWeight : 'bold'
     },
     input : {
-        paddingLeft : 40
+        paddingLeft : 40,
+        flex : 1
     }
     
 })

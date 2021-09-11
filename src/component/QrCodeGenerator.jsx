@@ -38,8 +38,10 @@ const QrCodeGenerator = ({navigation}) => {
                 <ProfileAccont />
             </View>
 
-            <View style = {{flexDirection : 'row', marginTop : 20, justifyContent : 'center', alignItems : 'center', marginRight : 30}}>
+            <View style={{width:'100%', height:1, backgroundColor:'grey', marginTop : 20}}></View>
+            <View style = {{ flexDirection : 'row', justifyContent : 'center', marginTop : 5, alignItems : 'center', marginRight : 30}}>
                 
+                <Text style = {styles.line}></Text>
                 <Text style = {styles.textScan}>Want to add new connection?</Text>
                 <View style = { styles.code}>
                     <TouchableOpacity style = {styles.button} onPress = {handleOnScan}>
@@ -103,8 +105,8 @@ const styles = StyleSheet.create({
         borderRadius : 3,
     },
     line : {
-        height : 1,
-        color : 'red'
+        height : 2,
+        backgroundColor : 'red'
     },
     text : {
         color : '#BC8677',

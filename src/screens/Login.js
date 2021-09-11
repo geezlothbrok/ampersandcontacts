@@ -28,6 +28,7 @@ const Login = ({navigation}) => {
                 <TextInput style = {styles.email}
                 autoCompleteType = 'email'
                 autoCorrect = {false}
+                textAlign = 'right'
                 autoCapitalize = 'none'
                 onChangeText = {(text) => {
                     handleOnChange('email', text);
@@ -42,11 +43,12 @@ const Login = ({navigation}) => {
             <TextInput
 				style={styles.passwordInput}
 				secureTextEntry={true}
+                textAlign = 'right'
 				autoCompleteType="password"
 				autoCapitalize="none"
 				autoCorrect={false}
 				onChangeText={(text) => {
-					handleOnChange('password', text);
+                handleOnChange('password', text);
 				}}
 				value={form.password}
 			/>
@@ -93,6 +95,7 @@ const styles = StyleSheet.create({
     },
     email : {
         paddingLeft : 30,
+        flex : 1
     },
     line : {
         backgroundColor : '#E7E7E7',
@@ -108,6 +111,7 @@ const styles = StyleSheet.create({
     },
     passwordInput : {
         paddingLeft : 30,
+        flex:1
     },
     buttonContainer : {
         flex : 0.2,
